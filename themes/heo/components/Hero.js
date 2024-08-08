@@ -78,20 +78,20 @@ function Banner(props) {
       id='banners'
       onClick={handleClickBanner}
       className='hidden xl:flex xl:flex-col group h-full bg-white dark:bg-[#1e1e1e] rounded-xl border dark:border-gray-700 mb-3 relative overflow-hidden'>
-      <div id='banner-title' className='flex flex-col absolute top-10 left-10'>
-        <div className='text-4xl font-bold mb-3  dark:text-white'>
+        
+     {/* 斜向滚动的图标 */}
+      <TagsGroupBar />
+
+      <div id='banner-title' className='flex flex-col absolute top-5 left-3'>
+        <div className='text-2xl font-bold mb-3  dark:text-white'>
           {siteConfig('HEO_HERO_TITLE_1', null, CONFIG)}
           <br />
           {siteConfig('HEO_HERO_TITLE_2', null, CONFIG)}
         </div>
-        <div className='text-xs text-gray-600  dark:text-gray-200'>
+        <div className='text-base text-gray-600  dark:text-gray-200'>
           {siteConfig('HEO_HERO_TITLE_3', null, CONFIG)}
         </div>
       </div>
-
-      {/* 斜向滚动的图标 */}
-      <TagsGroupBar />
-
       {/* 遮罩 */}
       <div
         id='banner-cover'
@@ -365,7 +365,7 @@ function TodayCard({ cRef, siteInfo }) {
           id='today-card-info'
           className='flex justify-between w-full relative text-white p-10 items-end'>
           <div className='flex flex-col'>
-            <div className='text-xs font-light'>
+            <div className='text-sm font-light'>
               {siteConfig('HEO_HERO_TITLE_4', null, CONFIG)}
             </div>
             <div className='text-3xl font-bold'>
