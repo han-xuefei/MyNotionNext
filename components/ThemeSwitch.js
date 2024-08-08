@@ -1,5 +1,5 @@
 import { useGlobal } from '@/lib/global'
-//import LANGS from '@/lib/lang'
+//  import LANGS from '@/lib/lang'
 import { getQueryParam } from '@/lib/utils'
 import { THEMES } from '@/themes/theme'
 import { useRouter } from 'next/router'
@@ -11,7 +11,7 @@ import { Draggable } from './Draggable'
  * @returns 主题切换
  */
 const ThemeSwitch = () => {
-  //const { theme, lang, changeLang, locale, isDarkMode, toggleDarkMode } =
+  //  const { theme, lang, changeLang, locale, isDarkMode, toggleDarkMode } =
   const { theme, locale, isDarkMode, toggleDarkMode } =
     useGlobal()
   const router = useRouter()
