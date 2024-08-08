@@ -11,7 +11,7 @@ import { Draggable } from './Draggable'
  * @returns 主题切换
  */
 const ThemeSwitch = () => {
-  //const { theme, lang, changeLang, locale, isDarkMode, toggleDarkMode } =
+  //  const { theme, lang, changeLang, locale, isDarkMode, toggleDarkMode } =
   const { theme, locale, isDarkMode, toggleDarkMode } =
     useGlobal()
   const router = useRouter()
