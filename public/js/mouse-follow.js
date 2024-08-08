@@ -630,8 +630,8 @@ function createMouseCanvas() {
                   let e
                   const i = this.config.fn
                   r[l++] = t = new c(null, 0, 0)
-                  for (let n = 0; n < 360; n += 20)
-                    for (let o = t, a = 10; a < 35; a += 1) {
+                  for (let n = 0; n < 360; n += 3)  //角度控制 默认n+=20
+                    for (let o = t, a = 14; a < 45; a += 4) { //控制长度 默认a = 10; a < 35; a += 1
                       const h = i(n, a).x
                       const s = i(n, a).y
                       ;(r[l++] = e = new c(o, h, s)), (o = e)
@@ -641,12 +641,38 @@ function createMouseCanvas() {
                   }, 16)
                 }
               }
+
+              function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                  color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+              }
+              function getRandomBalancedColor() {
+                const min = 70;  // 最小值
+                const max = 180; // 最大值
+                const r = Math.floor(Math.random() * (max - min) + min);
+                const g = Math.floor(Math.random() * (max - min) + min);
+                const b = Math.floor(Math.random() * (max - min) + min);
+                return `rgb(${r}, ${g}, ${b})`;
+              }
+              function getRandomBrightColor() {
+                const min = 80;  // 最小值
+                const max = 255;  // 最大值
+                const r = Math.floor(Math.random() * (max - min) + min);
+                const g = Math.floor(Math.random() * (max - min) + min);
+                const b = Math.floor(Math.random() * (max - min) + min);
+                return `rgb(${r}, ${g}, ${b})`;
+              }
               var c = function (t, e, i) {
                 const n = document.createElement('span')
                 ;(this.css = n.style),
-                  (this.css.backgroundColor = '#2D8CF0'),
-                  (this.css.width = '2px'),
-                  (this.css.height = '2px'),
+                (this.css.backgroundColor = getRandomBrightColor()), //修改为随机颜色
+                //(this.css.backgroundColor = '#2D8CF0'),  //默认为蓝色
+                  (this.css.width = '1px'),  //控制点大小 默认为2px
+                  (this.css.height = '1px'),
                   (this.css.position = 'absolute'),
                   (this.css.left = '-1000px'),
                   (this.css.zIndex = 1e3 - l),
