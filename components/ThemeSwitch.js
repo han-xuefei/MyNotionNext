@@ -91,7 +91,7 @@ const ThemeSwitch = () => {
           </div>
 
           {/* 翻译按钮 */}
-          <div className='text-sm flex items-center group-hover:w-32  duration-200'>
+          {/* <div className='text-sm flex items-center group-hover:w-32  duration-200'>
             <i className='fa-solid fa-language w-5' />
             <div className='w-0 group-hover:w-24  duration-200 overflow-hidden'>
               <label htmlFor='langSelect' className='sr-only'>
@@ -112,7 +112,7 @@ const ThemeSwitch = () => {
                 })}
               </select>
             </div>
-          </div>
+          </div> */}
         </div>
       </Draggable>
 
